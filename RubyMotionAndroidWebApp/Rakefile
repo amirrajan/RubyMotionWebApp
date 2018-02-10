@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project/template/android'
+
+begin
+  require 'bundler'
+  Bundler.require
+rescue LoadError
+end
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.name = 'WebWrapper'
+  app.api_version = "19"
+  app.permissions << :internet
+  app.theme = '@android:style/Theme.Material.Light.NoActionBar'
+end
